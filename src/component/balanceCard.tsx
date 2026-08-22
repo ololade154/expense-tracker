@@ -14,6 +14,7 @@ export const BalanceCard = () => {
     <div className="grid lg:grid-cols-3 gap-6">
       {balanceData.map((data) => {
         const colors = colorMap[data.color];
+        const Icon = data.icon;
         return (
           <div
             key={data.title}
@@ -28,7 +29,7 @@ export const BalanceCard = () => {
             <div className="flex items-center justify-between">
               <div className="text-gray-500 font-normal">{data.title}</div>
               <div className={`p-2 rounded-lg  ${colors.iconText}`}>
-                {data.icon}
+                <Icon size={20} />
               </div>
             </div>
 
