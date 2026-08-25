@@ -8,6 +8,7 @@ export interface BalanceProps {
   color: "blue" | "red" | "green";
 }
 export interface ITableProps {
+  id: string;
   date: Date;
   category: string;
   description: string;

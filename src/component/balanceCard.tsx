@@ -9,7 +9,7 @@ const colorMap = {
   red: { bar: "bg-red-500", iconText: "text-red-500" },
 };
 
-export const BalanceCard = () => {
+export const BalanceCard = ({ sum, expenseSum, incomeSum }: any) => {
   return (
     <div className="grid lg:grid-cols-3 gap-6">
       {balanceData.map((data) => {
@@ -35,7 +35,13 @@ export const BalanceCard = () => {
 
             {/* amount */}
             <div className="mt-6 text-2xl font-medium text-gray-900">
-              {data.amount}
+              {data.title === "Total Balance" ? (
+                <div>{sum}</div>
+              ) : data.title === "Total Income" ? (
+                <div>{incomeSum}</div>
+              ) : data.title === "Total Expense" ? (
+                <div>{expenseSum}</div>
+              ) : null}
             </div>
 
             {/* subtext */}
