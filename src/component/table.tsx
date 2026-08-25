@@ -86,18 +86,19 @@ export const Table = ({ setTransactions, transactions }: TableProps) => {
   return (
     <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4 lg:p-6">
       {/* Header */}
-      <div className="flex items-center justify-between mb-6 lg:mb-8">
+
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 lg:mb-8 gap-3">
         <h2 className="text-xl font-semibold text-gray-900">
           Recent Transactions
         </h2>
         <button
-          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors shadow-sm"
+          className="w-full sm:w-auto flex items-center justify-center gap-1 lg:gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors shadow-sm"
           onClick={() => setIsOpen(true)}
         >
-          <span className="text-lg leading-none">+</span> Add Transaction
+          <span className="text-2xl lg:text-lg leading-none">+</span> Add
+          Transaction
         </button>
       </div>
-
       {/* Table */}
       <div className="overflow-x-auto -mx-4 lg:mx-0">
         <table className="w-full border-collapse min-w-160">
